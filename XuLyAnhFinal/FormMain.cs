@@ -74,5 +74,14 @@ namespace XuLyAnhFinal
             }
             picInput.SizeMode = picResult.SizeMode = szMode;
         }
+
+        private void btnSaveResult_Click(object sender, EventArgs e)
+        {
+            if (picResult.Image == null) return;
+            var dlg = new SaveFileDialog { Title = "Lưu file ...", Filter = "PNG Image file (*.png)|*.png" };
+            if (dlg.ShowDialog() != DialogResult.OK) return;
+            picResult.Image.Save(dlg.FileName);
+            MessageBox.Show(this, "Lưu file thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

@@ -44,6 +44,7 @@
             this.picResult = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnSaveResult = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInput)).BeginInit();
@@ -142,6 +143,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSaveResult);
             this.groupBox2.Controls.Add(this.btnProccess);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label3);
@@ -151,7 +153,7 @@
             this.groupBox2.Controls.Add(this.txtThreshold);
             this.groupBox2.Location = new System.Drawing.Point(1019, 139);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(138, 201);
+            this.groupBox2.Size = new System.Drawing.Size(138, 259);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tùy chọn";
@@ -220,6 +222,21 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ảnh sản phẩm";
             // 
+            // btnSaveResult
+            // 
+            this.btnSaveResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveResult.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveResult.Image")));
+            this.btnSaveResult.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveResult.Location = new System.Drawing.Point(6, 201);
+            this.btnSaveResult.Name = "btnSaveResult";
+            this.btnSaveResult.Padding = new System.Windows.Forms.Padding(10);
+            this.btnSaveResult.Size = new System.Drawing.Size(125, 52);
+            this.btnSaveResult.TabIndex = 2;
+            this.btnSaveResult.Text = "Lưu file";
+            this.btnSaveResult.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveResult.UseVisualStyleBackColor = true;
+            this.btnSaveResult.Click += new System.EventHandler(this.btnSaveResult_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,6 +281,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnSaveResult;
     }
 }
 
