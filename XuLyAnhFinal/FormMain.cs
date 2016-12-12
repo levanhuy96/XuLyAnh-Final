@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -11,25 +12,32 @@ using System.Windows.Forms;
 
 namespace XuLyAnhFinal
 {
-    public partial class FormMain : Form, ILogProvider
+    public partial class FormMain : DevExpress.XtraBars.Ribbon.RibbonForm, ILogProvider
     {
         private Bitmap bitmap;
         public FormMain()
         {
             InitializeComponent();
-            cbImageMode.SelectedIndex = 0;
         }
 
-        private void picInput_Click(object sender, EventArgs e)
+        private void OpenFile()
         {
             var dlg = new OpenFileDialog { Title = "Chọn hình ảnh", Filter = "Image file (*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif" };
             if (dlg.ShowDialog() != DialogResult.OK) return;
             bitmap = new Bitmap(dlg.FileName);
-            picInput.Image = (Bitmap) bitmap.Clone();
+            picInput.Image = (Bitmap)bitmap.Clone();
         }
-        
 
-        private void btnProccess_Click(object sender, EventArgs e)
+        private void SaveFile()
+        {
+            if (picResult.Image == null) return;
+            var dlg = new SaveFileDialog { Title = "Lưu file ...", Filter = "PNG Image file (*.png)|*.png" };
+            if (dlg.ShowDialog() != DialogResult.OK) return;
+            picResult.Image.Save(dlg.FileName);
+            MessageBox.Show(this, "Lưu file thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ProcessImage()
         {
             try
             {
@@ -39,13 +47,13 @@ namespace XuLyAnhFinal
                 }
                 var opt = new SegmentOptions
                 {
-                    ThreshHold = Double.Parse(txtThreshold.Text),
-                    MinSize = int.Parse(txtN.Text)
+                    ThreshHold = double.Parse(editNguong.EditValue.ToString()),
+                    MinSize = int.Parse(editMinSize.EditValue.ToString())
                 };
-                if (opt.MinSize<0) throw new Exception("Minsize phải >= 0");
-                if (opt.ThreshHold<0 || opt.ThreshHold > 50) throw new Exception("Threshold phải lớn hơn hoặc bằng 0 và nhỏ hơn hoặc bằng 50");
+                if (opt.MinSize < 0) throw new Exception("Minsize phải >= 0");
+                if (opt.ThreshHold < 0 || opt.ThreshHold > 50) throw new Exception("Threshold phải lớn hơn hoặc bằng 0 và nhỏ hơn hoặc bằng 50");
                 var newBm =
-                    new GraphImageSegmentation(this,opt).Apply(bitmap.Clone(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
+                    new GraphImageSegmentation(this, opt).Apply(bitmap.Clone(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
                         PixelFormat.Format24bppRgb));
                 picResult.Image = newBm;
                 GC.Collect();
@@ -56,36 +64,53 @@ namespace XuLyAnhFinal
             }
         }
         
+        
+        public void Log(string s)
+        {
+        }
 
-        private void cbImageMode_SelectedIndexChanged(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            editSizingModeZZ.DataSource = new List<string>
+            {
+                "Bình thường",
+                "Đầy đủ",
+                "Thu phóng"
+            };
+            editSizingMode.EditValue = "Bình thường";
+        }
+
+        private void barEditItem1_EditValueChanged(object sender, EventArgs e)
         {
             var szMode = PictureBoxSizeMode.Normal;
-            switch (cbImageMode.SelectedIndex)
+            switch (editSizingMode.EditValue.ToString())
             {
-                case 0:
+                case "Bình thường":
                     szMode = PictureBoxSizeMode.Normal;
                     break;
-                case 1:
+                case "Đầy đủ":
                     szMode = PictureBoxSizeMode.Zoom;
                     break;
-                case 2:
+                case "Thu phóng":
                     szMode = PictureBoxSizeMode.StretchImage;
                     break;
             }
             picInput.SizeMode = picResult.SizeMode = szMode;
         }
 
-        private void btnSaveResult_Click(object sender, EventArgs e)
+        private void btnLoadImage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (picResult.Image == null) return;
-            var dlg = new SaveFileDialog { Title = "Lưu file ...", Filter = "PNG Image file (*.png)|*.png" };
-            if (dlg.ShowDialog() != DialogResult.OK) return;
-            picResult.Image.Save(dlg.FileName);
-            MessageBox.Show(this, "Lưu file thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            OpenFile();
         }
 
-        public void Log(string s)
+        private void btnProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            ProcessImage();
+        }
+
+        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFile();
         }
     }
 }

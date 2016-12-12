@@ -28,260 +28,438 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.picInput = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbImageMode = new System.Windows.Forms.ComboBox();
-            this.btnProccess = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtN = new System.Windows.Forms.TextBox();
-            this.txtThreshold = new System.Windows.Forms.TextBox();
+            this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.btnLoadImage = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSave = new DevExpress.XtraBars.BarButtonItem();
+            this.editSizingMode = new DevExpress.XtraBars.BarEditItem();
+            this.editSizingModeZZ = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.editNguong = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.editMinSize = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.btnProcess = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.tabPane = new DevExpress.XtraBars.Navigation.TabPane();
+            this.tabIntroduce = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.tabInOut = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.picResult = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnSaveResult = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.picInput = new System.Windows.Forms.PictureBox();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tabViewLog = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.editLog = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInput)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editSizingModeZZ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabPane)).BeginInit();
+            this.tabPane.SuspendLayout();
+            this.tabIntroduce.SuspendLayout();
+            this.tabInOut.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picResult)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            this.tabViewLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editLog.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.picLogo);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(7, 7);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1149, 126);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Giới thiệu";
             // 
             // picLogo
             // 
             this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(1035, 16);
+            this.picLogo.Location = new System.Drawing.Point(1037, 9);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(108, 104);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
             // 
-            // label1
+            // ribbon
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1143, 107);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Công cụ phân đoạn ảnh sử dụng thuật toán đồ thị.\r\n\r\nNhóm sinh viên thực hiện:\r\n+ " +
-    "Ngô Xuân Bách\r\n+ Đào Quang Thắng\r\n\r\nGiảng viên\r\nTS Nguyễn Hữu Quỳnh";
+            this.ribbon.AllowMinimizeRibbon = false;
+            this.ribbon.ExpandCollapseItem.Id = 0;
+            this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbon.ExpandCollapseItem,
+            this.btnLoadImage,
+            this.btnSave,
+            this.editSizingMode,
+            this.editNguong,
+            this.editMinSize,
+            this.btnProcess});
+            this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.MaxItemId = 7;
+            this.ribbon.Name = "ribbon";
+            this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPageHome});
+            this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.editSizingModeZZ,
+            this.repositoryItemSpinEdit1,
+            this.repositoryItemSpinEdit2});
+            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbon.Size = new System.Drawing.Size(1170, 147);
+            this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
-            // picInput
+            // btnLoadImage
             // 
-            this.picInput.BackColor = System.Drawing.Color.Gainsboro;
-            this.picInput.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picInput.Location = new System.Drawing.Point(3, 16);
-            this.picInput.Name = "picInput";
-            this.picInput.Size = new System.Drawing.Size(494, 481);
-            this.picInput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picInput.TabIndex = 0;
-            this.picInput.TabStop = false;
-            this.picInput.Click += new System.EventHandler(this.picInput_Click);
+            this.btnLoadImage.Caption = "Open";
+            this.btnLoadImage.Glyph = ((System.Drawing.Image)(resources.GetObject("btnLoadImage.Glyph")));
+            this.btnLoadImage.Id = 1;
+            this.btnLoadImage.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnLoadImage.LargeGlyph")));
+            this.btnLoadImage.Name = "btnLoadImage";
+            this.btnLoadImage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoadImage_ItemClick);
             // 
-            // label3
+            // btnSave
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Kiểu hiển thị";
+            this.btnSave.Caption = "Save";
+            this.btnSave.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSave.Glyph")));
+            this.btnSave.Id = 2;
+            this.btnSave.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnSave.LargeGlyph")));
+            this.btnSave.Name = "btnSave";
+            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
-            // cbImageMode
+            // editSizingMode
             // 
-            this.cbImageMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbImageMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbImageMode.FormattingEnabled = true;
-            this.cbImageMode.Items.AddRange(new object[] {
-            "Normal",
-            "Center",
-            "Stretch"});
-            this.cbImageMode.Location = new System.Drawing.Point(6, 32);
-            this.cbImageMode.Name = "cbImageMode";
-            this.cbImageMode.Size = new System.Drawing.Size(125, 21);
-            this.cbImageMode.TabIndex = 3;
-            this.cbImageMode.SelectedIndexChanged += new System.EventHandler(this.cbImageMode_SelectedIndexChanged);
+            this.editSizingMode.Caption = "Hiển thị";
+            this.editSizingMode.Edit = this.editSizingModeZZ;
+            this.editSizingMode.EditValue = ((short)(0));
+            this.editSizingMode.EditWidth = 120;
+            this.editSizingMode.Id = 3;
+            this.editSizingMode.Name = "editSizingMode";
+            this.editSizingMode.EditValueChanged += new System.EventHandler(this.barEditItem1_EditValueChanged);
             // 
-            // btnProccess
+            // editSizingModeZZ
             // 
-            this.btnProccess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProccess.Image = ((System.Drawing.Image)(resources.GetObject("btnProccess.Image")));
-            this.btnProccess.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProccess.Location = new System.Drawing.Point(6, 143);
-            this.btnProccess.Name = "btnProccess";
-            this.btnProccess.Padding = new System.Windows.Forms.Padding(10);
-            this.btnProccess.Size = new System.Drawing.Size(125, 52);
-            this.btnProccess.TabIndex = 2;
-            this.btnProccess.Text = "Thực thi";
-            this.btnProccess.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProccess.UseVisualStyleBackColor = true;
-            this.btnProccess.Click += new System.EventHandler(this.btnProccess_Click);
+            this.editSizingModeZZ.AutoHeight = false;
+            this.editSizingModeZZ.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.editSizingModeZZ.DropDownRows = 3;
+            this.editSizingModeZZ.Name = "editSizingModeZZ";
+            this.editSizingModeZZ.PopupSizeable = false;
+            this.editSizingModeZZ.ShowFooter = false;
+            this.editSizingModeZZ.ShowPopupShadow = false;
             // 
-            // groupBox2
+            // editNguong
             // 
-            this.groupBox2.Controls.Add(this.btnSaveResult);
-            this.groupBox2.Controls.Add(this.btnProccess);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cbImageMode);
-            this.groupBox2.Controls.Add(this.txtN);
-            this.groupBox2.Controls.Add(this.txtThreshold);
-            this.groupBox2.Location = new System.Drawing.Point(1019, 139);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(138, 259);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tùy chọn";
+            this.editNguong.Caption = "Ngưỡng";
+            this.editNguong.Edit = this.repositoryItemSpinEdit1;
+            this.editNguong.EditValue = "5,0";
+            this.editNguong.EditWidth = 118;
+            this.editNguong.Id = 4;
+            this.editNguong.Name = "editNguong";
+            this.editNguong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            toolTipTitleItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipTitleItem3.Appearance.Options.UseImage = true;
+            toolTipTitleItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem3.Image")));
+            toolTipTitleItem3.Text = "Ngưỡng (threshold) tối đa để sát nhập 2 vùng ảnh với nhau";
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "Lớn hơn 0 và nhỏ hơn 50, có thể là số thực";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.editNguong.SuperTip = superToolTip3;
             // 
-            // label5
+            // repositoryItemSpinEdit1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Vùng tối thiểu";
+            this.repositoryItemSpinEdit1.AutoHeight = false;
+            this.repositoryItemSpinEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemSpinEdit1.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1";
             // 
-            // label4
+            // editMinSize
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Ngưỡng [0 - 50]";
+            this.editMinSize.Caption = "Vùng tối thiểu";
+            this.editMinSize.Edit = this.repositoryItemSpinEdit2;
+            this.editMinSize.EditValue = "5";
+            this.editMinSize.EditWidth = 90;
+            this.editMinSize.Id = 5;
+            this.editMinSize.Name = "editMinSize";
+            this.editMinSize.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            toolTipTitleItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipTitleItem1.Appearance.Options.UseImage = true;
+            toolTipTitleItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem1.Image")));
+            toolTipTitleItem1.Text = "Vùng tối thiểu";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Các vùng ảnh có kích thướng nhỏ hơn kích thước này sẽ bị sát nhập lại với nhau";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.editMinSize.SuperTip = superToolTip1;
             // 
-            // txtN
+            // repositoryItemSpinEdit2
             // 
-            this.txtN.Location = new System.Drawing.Point(6, 117);
-            this.txtN.Name = "txtN";
-            this.txtN.Size = new System.Drawing.Size(125, 20);
-            this.txtN.TabIndex = 1;
-            this.txtN.Text = "5";
+            this.repositoryItemSpinEdit2.AutoHeight = false;
+            this.repositoryItemSpinEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemSpinEdit2.IsFloatValue = false;
+            this.repositoryItemSpinEdit2.Mask.EditMask = "N00";
+            this.repositoryItemSpinEdit2.Name = "repositoryItemSpinEdit2";
             // 
-            // txtThreshold
+            // btnProcess
             // 
-            this.txtThreshold.Location = new System.Drawing.Point(7, 78);
-            this.txtThreshold.Name = "txtThreshold";
-            this.txtThreshold.Size = new System.Drawing.Size(125, 20);
-            this.txtThreshold.TabIndex = 1;
-            this.txtThreshold.Text = "5";
+            this.btnProcess.Caption = "Thực thi";
+            this.btnProcess.Glyph = ((System.Drawing.Image)(resources.GetObject("btnProcess.Glyph")));
+            this.btnProcess.Id = 6;
+            this.btnProcess.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnProcess.LargeGlyph")));
+            this.btnProcess.Name = "btnProcess";
+            this.btnProcess.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnProcess.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProcess_ItemClick);
+            // 
+            // ribbonPageHome
+            // 
+            this.ribbonPageHome.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3});
+            this.ribbonPageHome.Name = "ribbonPageHome";
+            this.ribbonPageHome.Text = "Home";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.AllowTextClipping = false;
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnLoadImage);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnSave);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.ShowCaptionButton = false;
+            this.ribbonPageGroup1.Text = "File";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.AllowTextClipping = false;
+            this.ribbonPageGroup2.ItemLinks.Add(this.editSizingMode);
+            this.ribbonPageGroup2.ItemLinks.Add(this.editNguong);
+            this.ribbonPageGroup2.ItemLinks.Add(this.editMinSize);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.ShowCaptionButton = false;
+            this.ribbonPageGroup2.Text = "Options";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.AllowTextClipping = false;
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnProcess);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.ShowCaptionButton = false;
+            // 
+            // defaultLookAndFeel
+            // 
+            this.defaultLookAndFeel.LookAndFeel.SkinName = "Office 2013";
+            // 
+            // tabPane
+            // 
+            this.tabPane.Controls.Add(this.tabIntroduce);
+            this.tabPane.Controls.Add(this.tabInOut);
+            this.tabPane.Controls.Add(this.tabViewLog);
+            this.tabPane.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPane.Location = new System.Drawing.Point(0, 147);
+            this.tabPane.Name = "tabPane";
+            this.tabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.tabInOut,
+            this.tabViewLog,
+            this.tabIntroduce});
+            this.tabPane.RegularSize = new System.Drawing.Size(1170, 498);
+            this.tabPane.SelectedPage = this.tabInOut;
+            this.tabPane.Size = new System.Drawing.Size(1170, 498);
+            this.tabPane.TabIndex = 5;
+            this.tabPane.Text = "tabPane";
+            // 
+            // tabIntroduce
+            // 
+            this.tabIntroduce.Caption = "Giới thiệu";
+            this.tabIntroduce.Controls.Add(this.picLogo);
+            this.tabIntroduce.Controls.Add(this.labelControl1);
+            this.tabIntroduce.Name = "tabIntroduce";
+            this.tabIntroduce.Size = new System.Drawing.Size(1152, 453);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.AllowHtmlString = true;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.labelControl1.Location = new System.Drawing.Point(12, 3);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(1137, 150);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "<size=14>Công cụ phân đoạn ảnh sử dụng thuật toán đồ thị.</size><br>\r\nNhóm sinh v" +
+    "iên thực hiện:<br>\r\n+ Ngô Xuân Bách<br>\r\n+ Đào Quang Thắng<br><br>Giảng viên<br>" +
+    "<b>TS Nguyễn Hữu Quỳnh</b>";
+            // 
+            // tabInOut
+            // 
+            this.tabInOut.Caption = "Xử lý dữ liệu";
+            this.tabInOut.Controls.Add(this.layoutControl1);
+            this.tabInOut.Name = "tabInOut";
+            this.tabInOut.Size = new System.Drawing.Size(1152, 453);
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.picResult);
+            this.layoutControl1.Controls.Add(this.picInput);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.layoutControlGroup1;
+            this.layoutControl1.Size = new System.Drawing.Size(1152, 453);
+            this.layoutControl1.TabIndex = 0;
+            this.layoutControl1.Text = "layoutControl1";
             // 
             // picResult
             // 
-            this.picResult.BackColor = System.Drawing.Color.Gainsboro;
-            this.picResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picResult.Location = new System.Drawing.Point(3, 16);
+            this.picResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picResult.Location = new System.Drawing.Point(567, 28);
             this.picResult.Name = "picResult";
-            this.picResult.Size = new System.Drawing.Size(494, 481);
-            this.picResult.TabIndex = 0;
+            this.picResult.Size = new System.Drawing.Size(573, 413);
+            this.picResult.TabIndex = 5;
             this.picResult.TabStop = false;
             // 
-            // groupBox3
+            // picInput
             // 
-            this.groupBox3.Controls.Add(this.picInput);
-            this.groupBox3.Location = new System.Drawing.Point(7, 134);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(500, 500);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Click vào để chọn ảnh nguồn";
+            this.picInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.picInput.Location = new System.Drawing.Point(12, 28);
+            this.picInput.Name = "picInput";
+            this.picInput.Size = new System.Drawing.Size(551, 413);
+            this.picInput.TabIndex = 4;
+            this.picInput.TabStop = false;
             // 
-            // groupBox4
+            // layoutControlGroup1
             // 
-            this.groupBox4.Controls.Add(this.picResult);
-            this.groupBox4.Location = new System.Drawing.Point(513, 134);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(500, 500);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Ảnh sản phẩm";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1152, 453);
+            this.layoutControlGroup1.TextVisible = false;
             // 
-            // btnSaveResult
+            // layoutControlItem1
             // 
-            this.btnSaveResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveResult.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveResult.Image")));
-            this.btnSaveResult.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveResult.Location = new System.Drawing.Point(6, 201);
-            this.btnSaveResult.Name = "btnSaveResult";
-            this.btnSaveResult.Padding = new System.Windows.Forms.Padding(10);
-            this.btnSaveResult.Size = new System.Drawing.Size(125, 52);
-            this.btnSaveResult.TabIndex = 2;
-            this.btnSaveResult.Text = "Lưu file";
-            this.btnSaveResult.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveResult.UseVisualStyleBackColor = true;
-            this.btnSaveResult.Click += new System.EventHandler(this.btnSaveResult_Click);
+            this.layoutControlItem1.Control = this.picInput;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(555, 433);
+            this.layoutControlItem1.Text = "Ảnh đầu vào";
+            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(61, 13);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.picResult;
+            this.layoutControlItem2.Location = new System.Drawing.Point(555, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(577, 433);
+            this.layoutControlItem2.Text = "Ảnh đầu ra";
+            this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(61, 13);
+            // 
+            // tabViewLog
+            // 
+            this.tabViewLog.Caption = "Log";
+            this.tabViewLog.Controls.Add(this.editLog);
+            this.tabViewLog.Name = "tabViewLog";
+            this.tabViewLog.Size = new System.Drawing.Size(1152, 453);
+            // 
+            // editLog
+            // 
+            this.editLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editLog.Location = new System.Drawing.Point(0, 0);
+            this.editLog.MenuManager = this.ribbon;
+            this.editLog.Name = "editLog";
+            this.editLog.Size = new System.Drawing.Size(1152, 453);
+            this.editLog.TabIndex = 0;
             // 
             // FormMain
             // 
+            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 641);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
+            this.ClientSize = new System.Drawing.Size(1170, 645);
+            this.Controls.Add(this.tabPane);
+            this.Controls.Add(this.ribbon);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "FormMain";
-            this.Padding = new System.Windows.Forms.Padding(3);
+            this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xây dựng công cụ phân đoạn ảnh sử dụng thuật toán đồ thị";
-            this.groupBox1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInput)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editSizingModeZZ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabPane)).EndInit();
+            this.tabPane.ResumeLayout(false);
+            this.tabIntroduce.ResumeLayout(false);
+            this.tabInOut.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picResult)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            this.tabViewLog.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.editLog.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picLogo;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageHome;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel;
+        private DevExpress.XtraBars.BarButtonItem btnLoadImage;
+        private DevExpress.XtraBars.BarButtonItem btnSave;
+        private DevExpress.XtraBars.BarEditItem editSizingMode;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit editSizingModeZZ;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarEditItem editNguong;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
+        private DevExpress.XtraBars.BarEditItem editMinSize;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit2;
+        private DevExpress.XtraBars.BarButtonItem btnProcess;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Navigation.TabPane tabPane;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabInOut;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabIntroduce;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabViewLog;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private System.Windows.Forms.PictureBox picInput;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.PictureBox picResult;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnProccess;
-        private System.Windows.Forms.TextBox txtN;
-        private System.Windows.Forms.TextBox txtThreshold;
-        private System.Windows.Forms.ComboBox cbImageMode;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnSaveResult;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.MemoEdit editLog;
     }
 }
 
