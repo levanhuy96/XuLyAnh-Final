@@ -83,6 +83,7 @@ namespace XuLyAnhFinal
         
         public void Log(string s)
         {
+            editLog.Text = editLog.Text + s + "\r\n";
         }
 
         private void FormMain_Load(object sender, EventArgs e)

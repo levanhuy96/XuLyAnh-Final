@@ -66,12 +66,16 @@ namespace XuLyAnhFinal
             // +: http://zschuessler.github.io/DeltaE/learn/
             // Sử dụng lớp so sánh từ thư viện ColorMine
 
+            _logger.Log(string.Format("Ảnh đầu vào: {0}x{1}", sourceData.Width, sourceData.Height));
+            _logger.Log(string.Format("Tham số: Threshold {0}, Minsize {1}", threshold, minsize));
+
             // Xây dựng đồ thị từ hình ảnh
             // Mỗi đỉnh đồ thị là 1 điểm ảnh, 
             // Các đỉnh lân cận sẽ có cạnh nối với nhau và
             // có trọng số là <độ chênh lệnh> giữa 2 điểm ảnh đó
             // Ở đây sử dụng 4 liền kề
             // Kết quả sẽ có (Width-1)*(Height-1)*2 cạnh của đồ thị
+            _logger.Log("Bắt đầu phrase 1 -  phân hoạch hình ảnh");
             var comp = new CieDe2000Comparison();
             var items = new QueueItem[(sourceData.Width-1)*(sourceData.Height - 1)* 2];
             var itemCount = 0;
@@ -90,6 +94,7 @@ namespace XuLyAnhFinal
             // Xây dựng hàng chờ bao gồm các cạnh sắp xếp theo thứ tự
             // Trọng số không giảm
             // Bắt đầu tiến hành tìm cây khung nhỏ nhất (Minimum spanning tree) bằng thuật toán Krusal.
+            _logger.Log(string.Format("Hàng chờ hiện có {0} đối tượng", itemCount));
             Array.Sort(items, new QueueItemComparer());
             var set = new DisjointSet(sourceData.Width, sourceData.Height);
             for (var i = 0; i < itemCount; i++)
@@ -97,9 +102,11 @@ namespace XuLyAnhFinal
                 if (items[i].Val > threshold) break;
                 set.Join(items[i].U, items[i].V);
             }
+            _logger.Log(string.Format("Phrase 1 đã xong, đã tìm thấy {0} đoạn", set.NumSet));
 
             // Tiết hành sát nhập các vùng nhỏ hơn "minSize" với nhau
             // Cho chất lượng ảnh đầu ra tốt hơn
+            _logger.Log(string.Format("Bắt đầu phrase 2, kết hợp các vùng nhỏ lại"));
             for (var y = 0; y < sourceData.Height - 1; y++)
             {
                 for (var x = 0; x < sourceData.Width - 1; x++)
@@ -116,8 +123,10 @@ namespace XuLyAnhFinal
                     }
                 }
             }
+            _logger.Log(string.Format("Phrase 2 đã xong, đã tìm thấy {0} đoạn", set.NumSet));
 
             // Bảng màu tô màu các đoạn (super pixels) đã tìm được
+            _logger.Log(string.Format("Bắt đầu tô màu các đoạn"));
             var colorDict = new Dictionary<int, Color>();
             for (var y = 0; y < sourceData.Height; y++)
             {
@@ -137,6 +146,8 @@ namespace XuLyAnhFinal
                     destinationData.SetPixel(x, y, cl);
                 }
             }
+            _logger.Log(string.Format("Phân hoạch ảnh xong"));
+            _logger.Log(new string('-', 80));
         }
 
         public override Dictionary<PixelFormat, PixelFormat> FormatTranslations => formats;

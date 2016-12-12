@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnLoadImage = new DevExpress.XtraBars.BarButtonItem();
@@ -182,15 +182,15 @@
             this.editNguong.Id = 4;
             this.editNguong.Name = "editNguong";
             this.editNguong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
-            toolTipTitleItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipTitleItem3.Appearance.Options.UseImage = true;
-            toolTipTitleItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem3.Image")));
-            toolTipTitleItem3.Text = "Ngưỡng (threshold) tối đa để sát nhập 2 vùng ảnh với nhau";
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Lớn hơn 0 và nhỏ hơn 50, có thể là số thực";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.editNguong.SuperTip = superToolTip3;
+            toolTipTitleItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipTitleItem1.Appearance.Options.UseImage = true;
+            toolTipTitleItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem1.Image")));
+            toolTipTitleItem1.Text = "Ngưỡng (threshold) tối đa để sát nhập 2 vùng ảnh với nhau";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Lớn hơn 0 và nhỏ hơn 50, có thể là số thực";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.editNguong.SuperTip = superToolTip1;
             // 
             // repositoryItemSpinEdit1
             // 
@@ -213,15 +213,15 @@
             this.editMinSize.Id = 5;
             this.editMinSize.Name = "editMinSize";
             this.editMinSize.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
-            toolTipTitleItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipTitleItem1.Appearance.Options.UseImage = true;
-            toolTipTitleItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem1.Image")));
-            toolTipTitleItem1.Text = "Vùng tối thiểu";
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Các vùng ảnh có kích thướng nhỏ hơn kích thước này sẽ bị sát nhập lại với nhau";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.editMinSize.SuperTip = superToolTip1;
+            toolTipTitleItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipTitleItem2.Appearance.Options.UseImage = true;
+            toolTipTitleItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem2.Image")));
+            toolTipTitleItem2.Text = "Vùng tối thiểu";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Các vùng ảnh có kích thướng nhỏ hơn kích thước này sẽ bị sát nhập lại với nhau";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.editMinSize.SuperTip = superToolTip2;
             // 
             // repositoryItemSpinEdit2
             // 
@@ -401,8 +401,8 @@
             // editLog
             // 
             this.editLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editLog.EditValue = "";
             this.editLog.Location = new System.Drawing.Point(0, 0);
-            this.editLog.MenuManager = this.ribbon;
             this.editLog.Name = "editLog";
             this.editLog.Size = new System.Drawing.Size(1159, 520);
             this.editLog.TabIndex = 0;
