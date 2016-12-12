@@ -23,14 +23,16 @@ namespace XuLyAnhFinal
         private readonly Random rand = new Random(8080);
         private readonly Dictionary<PixelFormat, PixelFormat> formats;
 
+        private ILogProvider _logger;
         /// <summary>
         /// Hàm khởi tạo
         /// </summary>
         /// <param name="opt">Tham số truyền vào cho bộ lọc</param>
-        public GraphImageSegmentation(SegmentOptions opt)
+        public GraphImageSegmentation(ILogProvider logger,SegmentOptions opt)
         {
             this.threshold = opt.ThreshHold;
             this.minsize = opt.MinSize;
+            _logger = logger;
             formats = new Dictionary<PixelFormat, PixelFormat>
             {
                 [PixelFormat.Format24bppRgb] = PixelFormat.Format24bppRgb
@@ -59,9 +61,17 @@ namespace XuLyAnhFinal
             // sourceData = new GaussianBlur().Apply(sourceData);
 
             // Ở đây chúng ta dùng Color LAB để so sánh độ tương đồng của 2 màu khác nhau trong không gian màu RGB
-            // Link tham khảo: http://colormine.org/delta-e-calculator/ và http://zschuessler.github.io/DeltaE/learn/
-            // Sử dụng từ thư viện ColorMine
+            // Link tham khảo: 
+            // +: http://colormine.org/delta-e-calculator/ 
+            // +: http://zschuessler.github.io/DeltaE/learn/
+            // Sử dụng lớp so sánh từ thư viện ColorMine
 
+            // Xây dựng đồ thị từ hình ảnh
+            // Mỗi đỉnh đồ thị là 1 điểm ảnh, 
+            // Các đỉnh lân cận sẽ có cạnh nối với nhau và
+            // có trọng số là <độ chênh lệnh> giữa 2 điểm ảnh đó
+            // Ở đây sử dụng 4 liền kề
+            // Kết quả sẽ có (Width-1)*(Height-1)*2 cạnh của đồ thị
             var comp = new CieDe2000Comparison();
             var items = new QueueItem[(sourceData.Width-1)*(sourceData.Height - 1)* 2];
             var itemCount = 0;
@@ -79,7 +89,7 @@ namespace XuLyAnhFinal
 
             // Xây dựng hàng chờ bao gồm các cạnh sắp xếp theo thứ tự
             // Trọng số không giảm
-            // Bắt đầu tiến hành tìm cây khung nhỏ nhất bằng Krusal
+            // Bắt đầu tiến hành tìm cây khung nhỏ nhất (Minimum spanning tree) bằng thuật toán Krusal.
             Array.Sort(items, new QueueItemComparer());
             var set = new DisjointSet(sourceData.Width, sourceData.Height);
             for (var i = 0; i < itemCount; i++)
@@ -88,7 +98,8 @@ namespace XuLyAnhFinal
                 set.Join(items[i].U, items[i].V);
             }
 
-            // Sát nhập các vùng nhỏ hơn "minSize" với nhau
+            // Tiết hành sát nhập các vùng nhỏ hơn "minSize" với nhau
+            // Cho chất lượng ảnh đầu ra tốt hơn
             for (var y = 0; y < sourceData.Height - 1; y++)
             {
                 for (var x = 0; x < sourceData.Width - 1; x++)
@@ -106,7 +117,7 @@ namespace XuLyAnhFinal
                 }
             }
 
-            // Bảng màu tô màu các đoạn (super pixels)
+            // Bảng màu tô màu các đoạn (super pixels) đã tìm được
             var colorDict = new Dictionary<int, Color>();
             for (var y = 0; y < sourceData.Height; y++)
             {
@@ -132,6 +143,7 @@ namespace XuLyAnhFinal
     }
 
     // Hàng chờ các đối tượng
+    // Bản chất là các cạnh bao gồm Trọng số, 2 đỉnh đầu mút
     internal class QueueItem
     {
         public double Val;
@@ -145,6 +157,7 @@ namespace XuLyAnhFinal
         }
     }
 
+    // Hàm so sánh các đối tượng
     internal class QueueItemComparer : IComparer<QueueItem>
     {
         public int Compare(QueueItem x, QueueItem y)

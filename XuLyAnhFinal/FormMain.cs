@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace XuLyAnhFinal
 {
-    public partial class FormMain : Form
+    public partial class FormMain : Form, ILogProvider
     {
         private Bitmap bitmap;
         public FormMain()
@@ -22,7 +22,7 @@ namespace XuLyAnhFinal
 
         private void picInput_Click(object sender, EventArgs e)
         {
-            var dlg = new OpenFileDialog { Title = "Chọn hình ảnh", Filter = "Image file|*.jpg;*.png;*.gif" };
+            var dlg = new OpenFileDialog { Title = "Chọn hình ảnh", Filter = "Image file (*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif" };
             if (dlg.ShowDialog() != DialogResult.OK) return;
             bitmap = new Bitmap(dlg.FileName);
             picInput.Image = (Bitmap) bitmap.Clone();
@@ -45,7 +45,7 @@ namespace XuLyAnhFinal
                 if (opt.MinSize<0) throw new Exception("Minsize phải >= 0");
                 if (opt.ThreshHold<0 || opt.ThreshHold > 50) throw new Exception("Threshold phải lớn hơn hoặc bằng 0 và nhỏ hơn hoặc bằng 50");
                 var newBm =
-                    new GraphImageSegmentation(opt).Apply(bitmap.Clone(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
+                    new GraphImageSegmentation(this,opt).Apply(bitmap.Clone(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
                         PixelFormat.Format24bppRgb));
                 picResult.Image = newBm;
                 GC.Collect();
@@ -82,6 +82,10 @@ namespace XuLyAnhFinal
             if (dlg.ShowDialog() != DialogResult.OK) return;
             picResult.Image.Save(dlg.FileName);
             MessageBox.Show(this, "Lưu file thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void Log(string s)
+        {
         }
     }
 }
