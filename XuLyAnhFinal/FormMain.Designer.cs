@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -46,11 +47,15 @@
             this.editMinSize = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.btnProcess = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItemResize = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.ribbonPageHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.repositoryItemToggleSwitch1 = new DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.tabPane = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabIntroduce = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -61,18 +66,16 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.splitterItem1 = new DevExpress.XtraLayout.SplitterItem();
             this.tabViewLog = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.editLog = new DevExpress.XtraEditors.MemoEdit();
-            this.splitterItem1 = new DevExpress.XtraLayout.SplitterItem();
-            this.repositoryItemToggleSwitch1 = new DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch();
-            this.barEditItemResize = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editSizingModeZZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane)).BeginInit();
             this.tabPane.SuspendLayout();
             this.tabIntroduce.SuspendLayout();
@@ -84,11 +87,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).BeginInit();
             this.tabViewLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editLog.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // picLogo
@@ -130,7 +131,8 @@
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbon.Size = new System.Drawing.Size(1177, 147);
+            this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
+            this.ribbon.Size = new System.Drawing.Size(1348, 126);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
             this.ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -242,6 +244,29 @@
             this.btnProcess.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnProcess.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProcess_ItemClick);
             // 
+            // barEditItemResize
+            // 
+            this.barEditItemResize.Caption = "Tự động resize ảnh";
+            this.barEditItemResize.CaptionAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.barEditItemResize.Edit = this.repositoryItemCheckEdit1;
+            this.barEditItemResize.EditValue = false;
+            this.barEditItemResize.Id = 10;
+            this.barEditItemResize.Name = "barEditItemResize";
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.repositoryItemCheckEdit1.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.repositoryItemCheckEdit1.Appearance.Options.UseBackColor = true;
+            this.repositoryItemCheckEdit1.AppearanceDisabled.BackColor = System.Drawing.Color.Transparent;
+            this.repositoryItemCheckEdit1.AppearanceDisabled.BackColor2 = System.Drawing.Color.Transparent;
+            this.repositoryItemCheckEdit1.AppearanceDisabled.Options.UseBackColor = true;
+            this.repositoryItemCheckEdit1.AppearanceFocused.BackColor = System.Drawing.Color.Transparent;
+            this.repositoryItemCheckEdit1.AppearanceFocused.BackColor2 = System.Drawing.Color.Transparent;
+            this.repositoryItemCheckEdit1.AppearanceFocused.Options.UseBackColor = true;
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
             // ribbonPageHome
             // 
             this.ribbonPageHome.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -277,6 +302,21 @@
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.ShowCaptionButton = false;
             // 
+            // repositoryItemToggleSwitch1
+            // 
+            this.repositoryItemToggleSwitch1.AutoHeight = false;
+            this.repositoryItemToggleSwitch1.Name = "repositoryItemToggleSwitch1";
+            this.repositoryItemToggleSwitch1.OffText = "Off";
+            this.repositoryItemToggleSwitch1.OnText = "On";
+            // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.ItemLinks.Add(this.barEditItemResize);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 724);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbon;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1348, 23);
+            // 
             // defaultLookAndFeel
             // 
             this.defaultLookAndFeel.LookAndFeel.SkinName = "Office 2013";
@@ -287,15 +327,15 @@
             this.tabPane.Controls.Add(this.tabInOut);
             this.tabPane.Controls.Add(this.tabViewLog);
             this.tabPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPane.Location = new System.Drawing.Point(0, 147);
+            this.tabPane.Location = new System.Drawing.Point(0, 126);
             this.tabPane.Name = "tabPane";
             this.tabPane.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabInOut,
             this.tabViewLog,
             this.tabIntroduce});
-            this.tabPane.RegularSize = new System.Drawing.Size(1177, 565);
+            this.tabPane.RegularSize = new System.Drawing.Size(1348, 598);
             this.tabPane.SelectedPage = this.tabInOut;
-            this.tabPane.Size = new System.Drawing.Size(1177, 565);
+            this.tabPane.Size = new System.Drawing.Size(1348, 598);
             this.tabPane.TabIndex = 5;
             this.tabPane.Text = "tabPane";
             // 
@@ -325,7 +365,7 @@
             this.tabInOut.Caption = "Xử lý dữ liệu";
             this.tabInOut.Controls.Add(this.layoutControl1);
             this.tabInOut.Name = "tabInOut";
-            this.tabInOut.Size = new System.Drawing.Size(1159, 520);
+            this.tabInOut.Size = new System.Drawing.Size(1330, 553);
             // 
             // layoutControl1
             // 
@@ -336,16 +376,16 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(768, 406, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1159, 520);
+            this.layoutControl1.Size = new System.Drawing.Size(1330, 553);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // picResult
             // 
             this.picResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.picResult.Location = new System.Drawing.Point(579, 28);
+            this.picResult.Location = new System.Drawing.Point(674, 28);
             this.picResult.Name = "picResult";
-            this.picResult.Size = new System.Drawing.Size(568, 480);
+            this.picResult.Size = new System.Drawing.Size(644, 513);
             this.picResult.TabIndex = 5;
             this.picResult.TabStop = false;
             // 
@@ -354,7 +394,7 @@
             this.picInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.picInput.Location = new System.Drawing.Point(12, 28);
             this.picInput.Name = "picInput";
-            this.picInput.Size = new System.Drawing.Size(551, 480);
+            this.picInput.Size = new System.Drawing.Size(646, 513);
             this.picInput.TabIndex = 4;
             this.picInput.TabStop = false;
             // 
@@ -368,7 +408,7 @@
             this.splitterItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1159, 520);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1330, 553);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -376,7 +416,7 @@
             this.layoutControlItem1.Control = this.picInput;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(555, 500);
+            this.layoutControlItem1.Size = new System.Drawing.Size(650, 533);
             this.layoutControlItem1.Text = "Ảnh đầu vào";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(61, 13);
@@ -384,12 +424,19 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.picResult;
-            this.layoutControlItem2.Location = new System.Drawing.Point(567, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(662, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(572, 500);
+            this.layoutControlItem2.Size = new System.Drawing.Size(648, 533);
             this.layoutControlItem2.Text = "Ảnh đầu ra";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(61, 13);
+            // 
+            // splitterItem1
+            // 
+            this.splitterItem1.AllowHotTrack = true;
+            this.splitterItem1.Location = new System.Drawing.Point(650, 0);
+            this.splitterItem1.Name = "splitterItem1";
+            this.splitterItem1.Size = new System.Drawing.Size(12, 533);
             // 
             // tabViewLog
             // 
@@ -407,57 +454,12 @@
             this.editLog.Size = new System.Drawing.Size(1159, 520);
             this.editLog.TabIndex = 0;
             // 
-            // splitterItem1
-            // 
-            this.splitterItem1.AllowHotTrack = true;
-            this.splitterItem1.Location = new System.Drawing.Point(555, 0);
-            this.splitterItem1.Name = "splitterItem1";
-            this.splitterItem1.Size = new System.Drawing.Size(12, 500);
-            // 
-            // repositoryItemToggleSwitch1
-            // 
-            this.repositoryItemToggleSwitch1.AutoHeight = false;
-            this.repositoryItemToggleSwitch1.Name = "repositoryItemToggleSwitch1";
-            this.repositoryItemToggleSwitch1.OffText = "Off";
-            this.repositoryItemToggleSwitch1.OnText = "On";
-            // 
-            // barEditItemResize
-            // 
-            this.barEditItemResize.Caption = "Tự động resize ảnh";
-            this.barEditItemResize.CaptionAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.barEditItemResize.Edit = this.repositoryItemCheckEdit1;
-            this.barEditItemResize.EditValue = false;
-            this.barEditItemResize.Id = 10;
-            this.barEditItemResize.Name = "barEditItemResize";
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.repositoryItemCheckEdit1.Appearance.BackColor2 = System.Drawing.Color.Transparent;
-            this.repositoryItemCheckEdit1.Appearance.Options.UseBackColor = true;
-            this.repositoryItemCheckEdit1.AppearanceDisabled.BackColor = System.Drawing.Color.Transparent;
-            this.repositoryItemCheckEdit1.AppearanceDisabled.BackColor2 = System.Drawing.Color.Transparent;
-            this.repositoryItemCheckEdit1.AppearanceDisabled.Options.UseBackColor = true;
-            this.repositoryItemCheckEdit1.AppearanceFocused.BackColor = System.Drawing.Color.Transparent;
-            this.repositoryItemCheckEdit1.AppearanceFocused.BackColor2 = System.Drawing.Color.Transparent;
-            this.repositoryItemCheckEdit1.AppearanceFocused.Options.UseBackColor = true;
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            // 
-            // ribbonStatusBar1
-            // 
-            this.ribbonStatusBar1.ItemLinks.Add(this.barEditItemResize);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 712);
-            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1177, 28);
-            // 
             // FormMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 740);
+            this.ClientSize = new System.Drawing.Size(1348, 747);
             this.Controls.Add(this.tabPane);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbon);
@@ -465,6 +467,7 @@
             this.Name = "FormMain";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Xây dựng công cụ phân đoạn ảnh sử dụng thuật toán đồ thị";
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
@@ -472,6 +475,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.editSizingModeZZ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane)).EndInit();
             this.tabPane.ResumeLayout(false);
             this.tabIntroduce.ResumeLayout(false);
@@ -483,11 +488,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).EndInit();
             this.tabViewLog.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.editLog.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
