@@ -179,7 +179,7 @@
             // 
             this.editNguong.Caption = "Ngưỡng";
             this.editNguong.Edit = this.repositoryItemSpinEdit1;
-            this.editNguong.EditValue = "5,0";
+            this.editNguong.EditValue = "5";
             this.editNguong.EditWidth = 118;
             this.editNguong.Id = 4;
             this.editNguong.Name = "editNguong";
