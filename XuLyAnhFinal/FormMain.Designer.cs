@@ -96,7 +96,7 @@
             // 
             this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(1044, 9);
+            this.picLogo.Location = new System.Drawing.Point(1215, 9);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(108, 104);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -345,7 +345,7 @@
             this.tabIntroduce.Controls.Add(this.picLogo);
             this.tabIntroduce.Controls.Add(this.labelControl1);
             this.tabIntroduce.Name = "tabIntroduce";
-            this.tabIntroduce.Size = new System.Drawing.Size(1159, 520);
+            this.tabIntroduce.Size = new System.Drawing.Size(1330, 553);
             // 
             // labelControl1
             // 
@@ -443,7 +443,7 @@
             this.tabViewLog.Caption = "Log";
             this.tabViewLog.Controls.Add(this.editLog);
             this.tabViewLog.Name = "tabViewLog";
-            this.tabViewLog.Size = new System.Drawing.Size(1159, 520);
+            this.tabViewLog.Size = new System.Drawing.Size(1330, 553);
             // 
             // editLog
             // 
@@ -451,7 +451,7 @@
             this.editLog.EditValue = "";
             this.editLog.Location = new System.Drawing.Point(0, 0);
             this.editLog.Name = "editLog";
-            this.editLog.Size = new System.Drawing.Size(1159, 520);
+            this.editLog.Size = new System.Drawing.Size(1330, 553);
             this.editLog.TabIndex = 0;
             // 
             // FormMain
